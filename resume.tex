@@ -3,6 +3,15 @@
 \moderncvtheme{classic}
 \moderncvcolor{blue}
 
+\makeatletter
+\NewDocumentCommand{\mysubsection}{sm}{%
+  \par\addvspace{1ex}%
+  \phantomsection{}% reset the anchor for hyperrefs
+  \addcontentsline{toc}{subsection}{#2}%
+  {\strut\raggedleft\quad}{\strut\subsectionstyle{#2}}%
+  \par\nobreak\addvspace{.5ex}\@afterheading}% to avoid a pagebreak after the heading
+\makeatother
+
 \usepackage[utf8]{inputenc}
 \usepackage[colorlinks]{hyperref}
 
@@ -24,18 +33,18 @@
 \maketitle
 
 \section{Skills}
-\cventry{}{}{}{}{}{Languages
+\mysubsection{Languages}
 \begin{itemize}
     \item C\#, JavaScript, C, C++, Python, Swift, Rust
-\end{itemize}}
-\cventry{}{}{}{}{}{Frameworks
+\end{itemize}
+\mysubsection{Frameworks}
 \begin{itemize}
     \item Asp.Net Core, Entity Framework Core, Nest.js, Angular, React, Apollo GraphQL
-\end{itemize}}
-\cventry{}{}{}{}{}{Other Technology
+\end{itemize}
+\mysubsection{Other Technology}
 \begin{itemize}
     \item SQL Server, SQLite, Redis, Docker, Kubernetes, Git, Azure Service Bus, Azure Event Grid, Apache Kafka
-\end{itemize}}
+\end{itemize}
 
 \section{Experience}
 \subsection{Professional}
