@@ -1,0 +1,97 @@
+\documentclass[11pt,letterpaper,sans]{moderncv}
+\usepackage{libertine}
+\moderncvtheme{classic}
+\moderncvcolor{blue}
+
+\usepackage[utf8]{inputenc}
+\usepackage[colorlinks]{hyperref}
+
+\usepackage[scale=0.75]{geometry}
+\recomputelengths
+
+\firstname{Nathan}
+\familyname{McCrina}
+\address{1476 Birchwood Cir}{Franklin, TN 37064}
+\mobile{+14702045658}
+\email{nathan.mccrina@outlook.com}
+\extrainfo{\link[mccrina.site]{https://mccrina.site} (personal website)\\
+\link[github.com]{https://github.com/nfmccrina} (various personal projects)
+}
+
+\nopagenumbers{}
+
+\begin{document}
+\maketitle
+
+\section{Skills}
+\cventry{}{}{}{}{}{Languages
+\begin{itemize}
+    \item C\#, JavaScript, C, C++, Python, Swift, Rust
+\end{itemize}}
+\cventry{}{}{}{}{}{Frameworks
+\begin{itemize}
+    \item Asp.Net Core, Entity Framework Core, Nest.js, Angular, React, Apollo GraphQL
+\end{itemize}}
+\cventry{}{}{}{}{}{Other Technology
+\begin{itemize}
+    \item SQL Server, SQLite, Redis, Docker, Kubernetes, Git, Azure Service Bus, Azure Event Grid, Apache Kafka
+\end{itemize}}
+
+\section{Experience}
+\subsection{Professional}
+\cventry{2019--Present}{Senior Software Engineer}{Amedisys, Inc}{Nashville, TN}{}{Developed an in-house web application for a home health company\newline{}%
+\begin{itemize}%
+    \item Designed and led implementation of a cloud-hosted distributed solution for ingesting HL7 data from hospital systems over TCP (100,000+ messages per day)
+        \begin{itemize}
+            \item Used C\# Azure Functions to implement a pipeline for processing the received TCP messages and sending appropriate updates to our application
+            \item Project increased patient intake for Amedisys by a factor of 2-3 at partner hospitals by reducing reliance on manually monitoring hospital EMR for potential clients.
+        \end{itemize}
+    \item Maintained cloud infrastructure (Azure Kubernetes Service, Azure Cache for Redis, Azure SQL databases and more) required by our applications using Pulumi infrastructure-as-code framework
+    \item Led implementation of OAuth 2.0 authentication in our application; later integrated Amedisys corporate accounts into our authentication scheme which enabled Single Sign-On for our internal users and significantly improved their experience with the app.
+\end{itemize}}
+\cventry{2019--2019}{Software Engineer}{Independent Contractor}{Franklin, TN}{}{Remote contractor with Across Healthcare in Carrollton, GA\newline{}
+\begin{itemize}
+    \item Developed proof of concept/initial version of a web app for tracking medical provider billing data (\link{https://www.mdcomp.net})
+    \item Angular/Asp.Net Core/Sql Server stack
+\end{itemize}}
+\cventry{2017--2019}{Software Engineer}{Evicore Healthcare}{Franklin, TN}{}{Member of development team for health care IT company providing an insurance pre-authorization solution\newline{}
+\begin{itemize}
+    \item Responsible for creating and maintaining microservices during company's transition to an event-driven architecture based on Apache Kafka
+        \begin{itemize}
+            \item Implemented services in C\# using CQRS-style design principles
+            \item Helped maintain Azure-based CI/CD pipeline
+        \end{itemize}
+\end{itemize}}
+\cventry{2014--2017}{Software Engineer}{Greenway Health}{Carrollton, GA}{}{Full-stack developer at EMR vendor\newline{}
+\begin{itemize}
+    \item Maintained legacy application written in a mix of Visual Basic, VB.Net, C\# and frankly an embarassing amount of Sql Server stored procedures
+\end{itemize}}
+\subsection{Personal}
+\cventry{}{Languid}{}{}{}{Program that captures an audio stream from a microphone and uses cloud-hosted AI tools to translate it and send translated text or audio to clients in real time\newline{}
+\begin{itemize}
+    \item Audio capture and translation routine written in C++
+        \begin{itemize}
+            \item Required combining discrete sections of PCM data received from the cloud service into a single continuous audio stream
+        \end{itemize}
+    \item User interface implemented as a client-server model using HTTP web sockets to push newly translated text without user interaction
+        \begin{itemize}
+            \item Mobile-friendly
+        \end{itemize}
+    \item Code:
+        \begin{itemize}
+            \item \link{https://github.com/nfmccrina/languid}
+            \item \link{https://github.com/nfmccrina/languid-server}
+            \item \link{https://github.com/nfmccrina/languid-ui}
+        \end{itemize}
+\end{itemize}}
+\cventry{}{TuxedoCat}{}{}{}{Chess engine written in C++\newline{}
+\begin{itemize}
+    \item Explored some basic concepts in artificial intelligence/game theory such as the Minimax algorithm and alpha-beta pruning
+    \item Code: \link{https://github.com/nfmccrina/tuxedocat}
+\end{itemize}}
+
+\section{Education}
+\cventry{2012-2014}{B.S. Mathematics}{Gordon State College}{Barnesville, GA}{}{}
+
+\end{document}
+
